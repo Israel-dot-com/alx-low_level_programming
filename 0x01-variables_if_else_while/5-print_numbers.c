@@ -6,12 +6,16 @@
  */
 int main(void)
 {
-	int numb10 = 0;
+	int numb10;
+
+	numb10 = 0;
 
 	while (numb10 <= 9)
 	{
-		printf("%d\n", numb10);
-		numb10 = numb10 + 1;
+		putchar(numb10);
+		++numb10;
 	}
+	putchar('\n');
+
 	return (0);
 }
