@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 
 /**
@@ -7,12 +8,16 @@
  *
  */
 
-int main()
+int main(void)
 {
 	char az;
 
 	for(az = 'a'; az <= 'z'; ++az)
-		putchar("%c", az);
+	{
+		putchar(az);
+	}
+
+	putchar('\n');
 
 	return (0);
 }
