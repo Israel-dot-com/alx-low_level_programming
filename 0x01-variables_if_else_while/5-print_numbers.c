@@ -6,11 +6,11 @@
  */
 int main(void)
 {
-	int numb10;
+	char numb10;
 
 	numb10 = 0;
 
-	while (numb10 <= 9)
+	while (numb10 <= '9')
 	{
 		putchar(numb10);
 		++numb10;
