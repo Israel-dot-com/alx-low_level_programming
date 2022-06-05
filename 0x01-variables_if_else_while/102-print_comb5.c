@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of all function 
+ * main - Entry point of all function
  *
  * Return: 0 (Success message)
  */
@@ -13,13 +13,13 @@ int main(void)
 
 	for (i = 0; i < 100; i++)
 	{
-		a = i / 10; 
-		b = i % 10; 
+		a = i / 10;
+		b = i % 10;
 
 		for (j = 0; j < 100; j++)
 		{
-			c = j / 10; 
-			d = j % 10; 
+			c = j / 10;
+			d = j % 10;
 
 			if (a < c || (a == c && b < d))
 			{
