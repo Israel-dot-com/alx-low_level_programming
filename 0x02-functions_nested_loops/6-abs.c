@@ -9,15 +9,17 @@
 
 int _abs(int r)
 {
-	int r;
 
 	if (r < 0)
 	{
-		_putchar('-');
-		_putchar('\n');
+		return (r * (-1));
+	}
+	else if (r == 0)
+	{
+		return (0);
 	}
 	else
 	{
-		_putchar('\n');
+		return (r);
 	}
 }
