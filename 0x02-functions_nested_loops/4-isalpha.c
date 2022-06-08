@@ -14,6 +14,10 @@ int _isalpha(int c)
 	{
 		return (1);
 	}
+	if else (c >= 'A' || c <= 'Z')
+	{
+		return (1);
+	}
 
 	else
 	{
