@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - check the code
+ * _isdigit - check the code
  * @c: Variable that holds the number
  * Return: Always 0.
  */
