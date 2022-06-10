@@ -1,7 +1,6 @@
 #include "main.h"
 /**
  * print_numbers - prints 0-9
- * @i: int for the loop
  * Return: (0)
  */
 void print_numbers(void)
@@ -12,7 +11,7 @@ void print_numbers(void)
 
 	while (i <= 9)
 	{
-		_putchar(i);
+		_putchar (i + '0');
 		++i;
 	}
 
