@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 /**
  * main - Fizz buzz problem
@@ -29,4 +28,5 @@ int main(void)
 			printf("%d", i);
 		}
 	}
+	printf("\n");
 }
