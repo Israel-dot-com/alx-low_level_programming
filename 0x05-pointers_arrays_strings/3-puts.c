@@ -2,13 +2,21 @@
 /**
  * _puts - Resets pointer to 98
  *
- * @*str: Pointer to an int
+ * @i: counts string index
  *
- * @str: variable holding the pointer
+ * @str: pointer to a char
  */
 
 void _puts(char *str)
 {
-	_putchar('*str');
+	int i;
+
+	i = 0;
+
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		++i;
+	}
 	_putchar('\n');
 }
