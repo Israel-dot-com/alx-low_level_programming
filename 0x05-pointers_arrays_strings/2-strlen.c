@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strl - Resets pointer to 98
+ * _strlen - Returns the lengh of the string that was passed
  *
  * @s: Pointer to an char
  *
