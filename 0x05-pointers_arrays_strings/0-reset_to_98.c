@@ -4,7 +4,7 @@
  * 
  * @*n: Pointer to an int
  *
- * return: Always 0
+ * @n: variable holding the pointer
  */
 
 void reset_to_98(int *n)
