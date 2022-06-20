@@ -6,8 +6,9 @@
  *
  * Return: Always(0)
  */
-type prototype()
+unsigned int _strspn(char *s, char *accept)
 {
+	printf("Test")
         return ();
 }
 
