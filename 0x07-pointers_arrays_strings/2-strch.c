@@ -1,12 +1,22 @@
 #include "main.h"
 /**
- * xxx-
- * @s:
- * @c:
+ * _strchr - Locates a character in a string
+ *
+ * @s: string s
+ *
+ * @c: character c
  *
  * Return: Always(0)
  */
-type prototype()
+char *_strchr(char *s, char c);
 {
-	return ();
+	while (*s)
+	{
+		s++;
+
+		if (*s == c)
+		{
+			return (s);
+		}
+	}
 }
