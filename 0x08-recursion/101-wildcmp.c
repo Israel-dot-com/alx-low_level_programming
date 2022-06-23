@@ -6,6 +6,6 @@
  */
 int main(void)
 {
-	_putchar("Placeholder program");
+	_putchar("\n");
 	return (0);
 }
