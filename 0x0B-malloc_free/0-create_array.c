@@ -10,7 +10,7 @@
  * Return: Always (0).
  */
 
-int char *create_array(unsigned int size, char c)
+char *create_array(unsigned int size, char c)
 {
 	int *n;
 	unsigned int s;
