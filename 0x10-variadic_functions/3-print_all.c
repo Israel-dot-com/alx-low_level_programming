@@ -1,6 +1,6 @@
-#include "variadic_functions.h"
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
+#include "variadic_functions.h"
 
 void print_char(va_list arg);
 void print_int(va_list arg);
@@ -9,66 +9,83 @@ void print_string(va_list arg);
 void print_all(const char * const format, ...);
 
 /**
- * print_char - Prints a char.
- * @arg: A list of arguments pointing to
- *       the character to be printed.
+ * print_char - Prints char
+ * @valist: valist
  */
-void print_char(va_list arg)
+void print_char(va_list valist)
 {
-	char letter;
-
-	letter = va_arg(arg, int);
-	printf("%c", letter);
+	printf("%c", va_arg(valist, int));
 }
 
 /**
- * print_int - Prints an int.
- * @arg: A list of arguments pointing to
- *       the integer to be printed.
+ * print_int - prints int
+ * @valist: valist
  */
-void print_int(va_list arg)
+void print_int(va_list valist)
 {
-	int num;
-
-	num = va_arg(arg, int);
-	printf("%d", num);
+	printf("%d", va_arg(valist, int));
 }
 
 /**
- * print_float - Prints a float.
- * @arg: A list of arguments pointing to
- *       the float to be printed.
+ * print_float - prints float
+ * @valist: valist
  */
-void print_float(va_list arg)
+void print_float(va_list valist)
 {
-	float num;
-
-	num = va_arg(arg, double);
-	printf("%f", num);
+	printf("%f", va_arg(valist, double));
 }
 
 /**
- * print_string - Prints a string.
- * @arg: A list of arguments pointing to
- *       the string to be printed.
+ * print_string - prints string
+ * @valist: valist
  */
-void print_string(va_list arg)
+void print_string(va_list valist)
 {
-	char *str;
+	char *s;
 
-	str = va_arg(arg, char *);
+	s = va_arg(valist, char *);
 
-	if (str == NULL)
+	if (s == NULL)
 	{
 		printf("(nil)");
 		return;
 	}
-
-	printf("%s", str);
+	printf("%s", s);
 }
 
 /**
- * print_all - Prints anything, followed by a new line.
- * @format: A string of characters representing the argument types.
- * @...: A variable number of arguments to be printed.
+ * print_all - print varying input of ints, chars, floats, and strings
+ * @format: an array of chars signifying which data type to print
+ */
+void print_all(const char * const format, ...)
+{
+	char *separator = "";
+	int i, j = 0;
+	va_list valist;
 
+	datatype choice[] = { {'c', print_char},
+			      {'i', print_int},
+			      {'f', print_float},
+			      {'s', print_string},
+			      {'\0', NULL} };
+
+	/* iterate format; if datatype matched, access function via struct */
+	va_start(valist, format);
+	while (format != NULL && format[j] != '\0')
+	{
+		i = 0;
+		while (choice[i].letter != '\0')
+		{
+			if (choice[i].letter == format[j])
+			{
+				printf("%s", separator);
+				choice[i].func(valist); /*access va_arg later*/
+				separator = ", ";
+			}
+			i++;
+		}
+		j++;
+	}
+	va_end(valist);
+OAOAOA	printf("\n");
+}
